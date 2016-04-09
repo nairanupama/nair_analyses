@@ -78,7 +78,7 @@ def analyze_subjects(sjs_all, do_preps):
 		print "Time elapsed: ", time.time() - start_time, "s"
 		job_server.print_stats()
 	else:
-		run_subject(sjs_all[0], data_folder = data_folder, do_preps = do_preps, compute_saccades = compute_saccades, individual_plots = individual_plots)
+		run_subject(sjs_all[0], data_folder = data_folder, do_preps = do_preps)
 
 
 def main():
