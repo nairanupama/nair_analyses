@@ -64,19 +64,17 @@ import logging.config
 
 # sys.path.append( os.environ['ANALYSIS_HOME'] )
 
-from ..log import *
+from src.log import *
 
-from ..Operators import EDFOperator, HDFEyeOperator, EyeSignalOperator
+from src import EDFOperator, HDFEyeOperator, EyeSignalOperator
 
-from ..Operators.EyeSignalOperator import detect_saccade_from_data
+#from ..Operators.EyeSignalOperator import detect_saccade_from_data
 
-from ..Operators.CommandLineOperator import ExecCommandLine
+from src.Operators.CommandLineOperator import ExecCommandLine
 
-from ..other_scripts.plotting_tools import *
+#from ..other_scripts.plotting_tools import *
 
-from ..other_scripts.circularTools import *
-
-
+#from ..other_scripts.circularTools import *
 
 
 
