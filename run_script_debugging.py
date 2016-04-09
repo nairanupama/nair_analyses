@@ -70,7 +70,7 @@ def analyze_subjects(sjs_all, do_preps):
 		job_server = pp.Server(ppservers=())
 	
 		start_time = time.time()
-		jobs = [(sj, job_server.submit(run_subject,(sj, data_folder, do_preps) for sj in sjs_all))]
+		jobs = [(sj, job_server.submit(run_subject,(sj, data_folder, do_preps),(), ("SPS"))) for sj in sjs_all]
 		results = []
 		for s, job in jobs:
 			job()
@@ -85,7 +85,7 @@ def main():
 	"""
 	This function determines whether the analyze_subjects or group_level_analyses should be run, and with which options
 	"""
-	#analyze_subjects(sjs_all, do_preps = True)
+	analyze_subjects(sjs_all, do_preps = True)
 	#group_level_analyses(sjs_all, data_folder,create_group_lvl_data = False,evaluate_trial_selection=False,fit_and_plot=True)
 	print "hello"
 
