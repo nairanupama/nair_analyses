@@ -87,7 +87,7 @@ def main():
 	"""
 	analyze_subjects(sjs_all, do_preps = True)
 	#group_level_analyses(sjs_all, data_folder,create_group_lvl_data = False,evaluate_trial_selection=False,fit_and_plot=True)
-	print "hello"
+	#print "hello"
 
 if __name__ == '__main__':
 	main()
