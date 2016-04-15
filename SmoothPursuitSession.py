@@ -68,36 +68,62 @@ from src.log import *
 
 from src import EDFOperator, HDFEyeOperator, EyeSignalOperator
 
+<<<<<<< HEAD
 #from src.EyeSignalOperator import detect_saccade_from_data
 
 from src.CommandLineOperator import ExecCommandLine
 
 #from src.other_scripts.plotting_tools import *
+=======
+#from ..Operators.EyeSignalOperator import detect_saccade_from_data
+
+from src.Operators.CommandLineOperator import ExecCommandLine
+
+#from ..other_scripts.plotting_tools import *
+>>>>>>> ac54774a1256c2040ad0fa75d260fa2c6f536193
 
 #from ..other_scripts.circularTools import *
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ac54774a1256c2040ad0fa75d260fa2c6f536193
 class SmoothPursuitSession(object):
 
     """SmoothPursuitSession"""
 
 
 
+<<<<<<< HEAD
     def __init__(self, subject, experiment_name, project_directory, conditions,loggingLevel=logging.DEBUG):
+=======
+    def __init__(self, subject, experiment_name, project_directory, conditions, loggingLevel=logging.DEBUG):
+
+>>>>>>> ac54774a1256c2040ad0fa75d260fa2c6f536193
         self.subject = subject
 
         self.experiment_name = experiment_name
 
         self.conditions = conditions
+<<<<<<< HEAD
         #shell()        
+=======
+>>>>>>> ac54774a1256c2040ad0fa75d260fa2c6f536193
 
         try:
 
             os.mkdir(os.path.join(project_directory, experiment_name))
+<<<<<<< HEAD
             os.mkdir(os.path.join(project_directory, experiment_name, self.subject))
+=======
+
+            os.mkdir(
+
+                os.path.join(project_directory, experiment_name, self.subject.initials))
+>>>>>>> ac54774a1256c2040ad0fa75d260fa2c6f536193
 
         except OSError:
 
@@ -107,18 +133,32 @@ class SmoothPursuitSession(object):
 
         self.base_directory = os.path.join(
 
+<<<<<<< HEAD
             self.project_directory, self.experiment_name, self.subject)
+=======
+            self.project_directory, self.experiment_name, self.subject.initials)
+
+>>>>>>> ac54774a1256c2040ad0fa75d260fa2c6f536193
 
 
         self.create_folder_hierarchy()
 
         self.hdf5_filename = os.path.join(
 
+<<<<<<< HEAD
             self.base_directory, 'processed', self.subject + '.hdf5')
 
         self.ho = HDFEyeOperator.HDFEyeOperator(self.hdf5_filename)
 
         
+=======
+            self.base_directory, 'processed', self.subject.initials + '.hdf5')
+
+        self.ho = HDFEyeOperator.HDFEyeOperator(self.hdf5_filename)
+
+
+
+>>>>>>> ac54774a1256c2040ad0fa75d260fa2c6f536193
         self.nr_trials_per_block = 150
 
         self.nr_blocks = 8
@@ -167,7 +207,11 @@ class SmoothPursuitSession(object):
 
         this_dir = self.project_directory
 
+<<<<<<< HEAD
         for d in [self.experiment_name, self.subject]:
+=======
+        for d in [self.experiment_name, self.subject.initials]:
+>>>>>>> ac54774a1256c2040ad0fa75d260fa2c6f536193
 
             try:
 

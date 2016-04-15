@@ -70,11 +70,16 @@ from Tools.other_scripts.plotting_tools import *
 
 from Tools.other_scripts.circularTools import *
 
-#from Tools.Sessions.HexagonalSaccadeAdaptationSession import  HexagonalSaccadeAdaptationSession
+from Tools.Sessions.HexagonalSaccadeAdaptationSession import  HexagonalSaccadeAdaptationSession
 
 
 
 from IPython import embed as shell
+
+
+
+
+
 	
 
 def nan_helper(y):
@@ -227,7 +232,7 @@ def fit_pow(data):
 
 
 
-class HexagonalSaccadeAdaptationGroupLevelAnalyses(object): #dont need this one
+class HexagonalSaccadeAdaptationGroupLevelAnalyses(object):
 
 	"""
 
